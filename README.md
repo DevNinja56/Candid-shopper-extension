@@ -17,4 +17,14 @@ It also interacts and highlights things on the browser page to redirect user to 
 
 **Server:** Python, Chrome Store, 
 
+## Screenshots
 
+
+![App Screenshot](https://user-images.githubusercontent.com/97098423/206182238-8ba5f439-2506-4347-8203-796b5fb98953.png)
+![App Screenshot](https://user-images.githubusercontent.com/97098423/206182257-9e639334-2790-46cc-a27d-c256f598040f.png)
+![App Screenshot](https://user-images.githubusercontent.com/97098423/206182277-83c0dcd2-3de8-460b-9719-da0734adc6f9.png)
+
+## Authors
+
+- [@DevNinja56](https://github.com/DevNinja56)
+- Made with ❤️ and JavaScrip
