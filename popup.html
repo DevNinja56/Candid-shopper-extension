@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CandidShopper</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script type="text/javascript" src="pako.js"></script>
+</head>
+
+<body id="body">
+
+  <main class="mainContainer">
+    <div class="container">
+      <div class="toggleBtn" id="toggleBtn">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" id="toggleActive">
+          <path
+            d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z"
+            fill="currentColor" />
+        </svg>
+      </div>
+
+      <div class="toggleContainer" id="toggleContainer">
+        <button id="logout_button" class="btn-default">Logout</button>
+        <button id="feedback_button" class="btn-default">Feedback</button>
+        <button id="pako" class="btn-default">Pako Zip</button>
+      </div>
+      <div id="timer"></div>
+      <img src="/images/logo_horizontal.png" class="logo_horizontal" id="main_logo" />
+      <h1 class="tintin" id="step_title">Digital Customer Experience Research</h1>
+      <p class="tintin-p" id="step_description">
+        Get Paid to Shop! 😍 As a mystery shopper you help to make online shopping a better experience for shoppers like
+        yourself. You help ecommerce companies to understand their target market and mystery shopping drives improvement
+        in areas such as customer service, communication and overall shopping experience.
+      </p>
+      <div id="step_media_box">
+
+      </div>
+      <div id="message_box" style="display:none"></div>
+
+      <div id="components_box">
+
+      </div>
+      <a href="#" id="start_now_button" class="tintin-btn">START NOW</a>
+      <div style="display:flex">
+        <button title="Report a problem with this assignment." id="report_bug" style="display: none;">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" id="report_bug_icon">
+            <path
+              d="M511.988 288.9c-.478 17.43-15.217 31.1-32.653 31.1H424v16c0 21.864-4.882 42.584-13.6 61.145l60.228 60.228c12.496 12.497 12.496 32.758 0 45.255-12.498 12.497-32.759 12.496-45.256 0l-54.736-54.736C345.886 467.965 314.351 480 280 480V236c0-6.627-5.373-12-12-12h-24c-6.627 0-12 5.373-12 12v244c-34.351 0-65.886-12.035-90.636-32.108l-54.736 54.736c-12.498 12.497-32.759 12.496-45.256 0-12.496-12.497-12.496-32.758 0-45.255l60.228-60.228C92.882 378.584 88 357.864 88 336v-16H32.666C15.23 320 .491 306.33.013 288.9-.484 270.816 14.028 256 32 256h56v-58.745l-46.628-46.628c-12.496-12.497-12.496-32.758 0-45.255 12.498-12.497 32.758-12.497 45.256 0L141.255 160h229.489l54.627-54.627c12.498-12.497 32.758-12.497 45.256 0 12.496 12.497 12.496 32.758 0 45.255L424 197.255V256h56c17.972 0 32.484 14.816 31.988 32.9zM257 0c-61.856 0-112 50.144-112 112h224C369 50.144 318.856 0 257 0z"
+              fill="currentColor" />
+          </svg>
+        </button>
+        <button title="Restart assignment from the beginning." id="task_reset" style="display:none">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+            <path d="M463.5 224H472c13.3 0 24-10.7 24-24V72c0-9.7-5.8-18.5-14.8-22.2s-19.3-1.7-26.2 5.2L413.4 96.6c-87.6-86.5-228.7-86.2-315.8 1c-87.5 87.5-87.5 229.3 0 316.8s229.3 87.5 316.8 0c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0c-62.5 62.5-163.8 62.5-226.3 0s-62.5-163.8 0-226.3c62.2-62.2 162.7-62.5 225.3-1L327 183c-6.9 6.9-8.9 17.2-5.2 26.2s12.5 14.8 22.2 14.8H463.5z"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+    <img src="./images/27-mascot_pose3.png" class="mascot-pose" id="mascot_pose" />
+    <div class="horizon-grad" id="circle_graphics">
+      <svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%">
+        <defs>
+          <linearGradient id="grad1" x2="0" y2="100%">
+            <stop offset="0%" style="stop-color: rgb(243, 202, 86); stop-opacity: 1"></stop>
+            <stop offset="70%" style="stop-color: rgb(247, 173, 66); stop-opacity: 1"></stop>
+            <stop offset="100%" style="stop-color: rgb(143, 83, 20); stop-opacity: 1"></stop>
+          </linearGradient>
+        </defs>
+        <path fill="url(#grad1)"
+          d="M-3.10,62.66 C315.18,123.84 260.44,-88.31 500.00,49.98 L500.00,150.00 L0.00,150.00 Z">
+        </path>
+      </svg>
+    </div>
+    <!-- <div class="horizon-bubbles" id="bubble_graphics">
+      <svg height="100" width="100%" id="cloud">
+        <defs>
+          <filter id="filter" x="0" y="0">
+            <feGaussianBlur stdDeviation=".4"></feGaussianBlur>
+          </filter>
+        </defs>
+        <circle cx="0" cy="76" r="46" fill="#ffffff" filter="url(#filter)"></circle>
+        <circle cx="60" cy="94" r="47" fill="#ffffff" filter="url(#filter)"></circle>
+        <circle cx="120" cy="62" r="43" fill="#ffffff" filter="url(#filter)"></circle>
+        <circle cx="180" cy="92" r="37" fill="#ffffff" filter="url(#filter)"></circle>
+        <circle cx="240" cy="94" r="41" fill="#ffffff" filter="url(#filter)"></circle>
+        <circle cx="300" cy="70" r="46" fill="#ffffff" filter="url(#filter)"></circle>
+        <circle cx="360" cy="95" r="43" fill="#ffffff" filter="url(#filter)"></circle>
+        <circle cx="420" cy="78" r="51" fill="#ffffff" filter="url(#filter)"></circle>
+        <circle cx="480" cy="66" r="49" fill="#ffffff" filter="url(#filter)"></circle>
+        <circle cx="540" cy="90" r="47" fill="#ffffff" filter="url(#filter)"></circle>
+      </svg>
+    </div> -->
+  </main>
+</body>
+<script src="popup.js"></script>
+
+</html>

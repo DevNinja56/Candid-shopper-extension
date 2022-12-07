@@ -1,0 +1,31 @@
+{
+  "manifest_version": 3,
+  "name": "CandidShopper",
+  "version": "0.1",
+  "icons": {                   
+    "48": "icon_128.png"
+  }, 
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": [
+        "content.js"
+      ]
+    }
+  ],
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "CandidShopper",
+    "default_icon": "icon_128.png"
+  },
+  "permissions": [
+    "tabs"
+  ]
+  
+}
